@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hello Piano</title>
+        <link rel = "icon" href = "assests/star.png"  type = "image/x-icon">
+        <style>
+        body{
+            background-image: url(assests/bg1.jpg);
+        }
+        form{
+            border-radius: 10px;
+            width:400px;
+            padding:30px ;
+            background-color: rgb(255, 255, 255);
+            border:1px solid rgb(205, 206, 214);
+        }
+        input{
+            width:300px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid grey;
+            color:black;
+            padding: 5px;
+        }
+
+        input:focus{
+            outline: 0px solid transparent;
+        }
+        button{
+            border: 1px solid rgb(144, 139, 139);
+            border-radius: 6px;
+            width:90%;
+            padding:15px;;   
+            font-family: arial; 
+        }
+        @media only screen and (max-width: 650px) {
+            form{
+                width: 70%;
+            }
+            input{width: 80%;}
+        }
+        </style>
+</head> 
+<body style="background-color:rgb(241, 241, 248)">
+    <h1 style="font-family:'poppins',sans-serif; color:white;" align="center">Registration Form</h1>
+    <div align="center" class="form">
+    <form align="center" class="form">
+        <input type="text" placeholder="First Name" required ><br><br>
+        <input type="text" placeholder="Last Name" ><br><br>
+        <input type="date" required><br><br>
+        <input type="email"  placeholder="Email" required><br><br>
+        <input type="text"  placeholder="Mobile Number"  maxlength="18" required><br><br>
+        <input type="text" placeholder="Username" minlength="8" required><br><br>
+        <input type="password" placeholder="Enter password" minlength="8" maxlength="18" required><br><br>
+        <input type="password" placeholder="Confirm password" minlength="8" maxlength="'18" required><br><br>
+        <br>
+        <button value="Create New Account" style="background-color:#8216ff; color:white; font-size:20px; border:none;width:fit-content;height:fit-content"><a href="signin.html" target="_self" style="text-decoration:none;color:white" target="_blank">Register</a></button>
+    </form>
+    <br>
+</div>
+</body>
+</html>

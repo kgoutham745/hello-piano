@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <title>Hello Piano</title>
+        <link rel = "icon" href = "assests/star.png"  type = "image/x-icon">
+</head>
+<body id="bg">
+  
+  <div class="notes">
+    <marquee behavior="" direction="" id="marquee">
+      <img src="notes/notes.png" alt="" width="800px">
+    </marquee>
+  </div>
+  <img src="notes/info.png" id="info" class="info" alt="" width="50px" onclick="show(this)">
+  <div class="controls">
+    <img src="notes/play.png" alt="" width="80px" onclick="play()">
+    <img src="notes/pause.png" alt="" width="80px" onclick="pause()">
+    <img src="notes/next.png" alt="" width="80px" onclick="reset()">
+  </div>
+  <div class="controls2">
+    <img src="notes/fast-forward.png" alt="" width="80px" onclick="increase()">
+    <img src="notes/rewind.png" alt="" width="80px" onclick="same()">
+    <img src="notes/slow.png" alt="" width="80px" onclick="decrease()">
+  </div>
+  <div class="piano">
+    <div data-note="C" class="key white">Z</div>
+    <div data-note="Db" class="key black">S</div>
+    <div data-note="D" class="key white">X</div>
+    <div data-note="Eb" class="key black">D</div>
+    <div data-note="E" class="key white">C</div>
+    <div data-note="F" class="key white">V</div>
+    <div data-note="Gb" class="key black">G</div>
+    <div data-note="G" class="key white">B</div>
+    <div data-note="Ab" class="key black">H</div>
+    <div data-note="A" class="key white">N</div>
+    <div data-note="Bb" class="key black">J</div>
+    <div data-note="B" class="key white">M</div>
+  </div>
+
+  <div class="instructions" id="ins">
+    <h1 id="heading">Welcome to <b>Hello Piano</b> lessons</h1>
+    <p id="line1">Before getting further, we will make you get familiar with the interface</p>
+    <p id="line2">Below we have 6 buttons, 3 on the right and rest on the left</p>
+    <button id="nextbtn" onclick="prevIns()">Prev</button>
+    <button id="nextbtn" onclick="nextIns()">Next</button>
+  </div>
+
+  <div class="overlay" id="overlay" onclick="hide(this)">
+    <img src="notes/up-arrow.png" class="r1" alt="" width="100px">
+    <img src="notes/up-arrow (1).png" class="r2" alt="" width="100px">
+    <img src="notes/right-drawn-arrow.png" class="r3" alt="" width="100px">
+    <img src="notes/right-arrow.png" class="r4" alt="" width="100px">
+    <img src="notes/left-arrow.png" class="r5" alt="" width="100px">
+    <img src="notes/arrow.png" class="r6" alt="" width="100px">
+    <h1 class="r1 m10">Slow</h1>
+    <h1 class="r2 m10">Next</h1>
+    <h1 class="r3 m10">Speed</h1>
+    <h1 class="r4 m10">Reset</h1>
+    <h1 class="r5 m10">Pause</h1>
+    <h1 class="r6 m10">Play</h1>
+  </div>
+
+  <audio id="C" src="notes/C.mp3"></audio>
+  <audio id="Db" src="notes/Db.mp3"></audio>
+  <audio id="D" src="notes/D.mp3"></audio>
+  <audio id="Eb" src="notes/Eb.mp3"></audio>
+  <audio id="E" src="notes/E.mp3"></audio>
+  <audio id="F" src="notes/F.mp3"></audio>
+  <audio id="Gb" src="notes/Gb.mp3"></audio>
+  <audio id="G" src="notes/G.mp3"></audio>
+  <audio id="Ab" src="notes/Ab.mp3"></audio>
+  <audio id="A" src="notes/A.mp3"></audio>
+  <audio id="Bb" src="notes/Bb.mp3"></audio>
+  <audio id="B" src="notes/B.mp3"></audio>
+</body>
+</html>

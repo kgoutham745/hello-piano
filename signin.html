@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Piano</title>
+    <link rel = "icon" href = "assests/star.png"  type = "image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+        *{margin: 0;padding: 0;}
+        .bg{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(assests/bg2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100%;
+        }
+        button{
+            background-color: #8216ff;
+            padding: 1rem;
+            border-radius: 20px;
+            border: none;
+            color: white;
+            width: 300px;
+            margin: 20px 0px;
+            cursor: pointer;
+        }
+        .name{
+            color: white;
+            font-family: 'Combo', cursive;
+            font-weight: 400;
+            font-size: xx-large;
+            text-align: center;
+        }
+        .center{
+            z-index: 100000;
+        }
+
+        .center img{
+            border-radius: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        input{
+            width:300px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid grey;
+            color:white;
+            padding: 5px;
+        }
+
+        input:focus{
+            outline: 0px solid transparent;
+            border-bottom: 2px solid white;
+        }
+        p{
+            text-align: center;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            opacity: 0.8;
+        }
+        .atag{
+            margin: 15px;
+        }
+        a{
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            opacity: 0.8;
+        }
+        a:visited{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg" id="bg">
+        <div class="center">
+            <div class="name">
+                <h1>Hello<br>Piano</h1>
+            </div>
+            <input type="text" placeholder="Email">
+            <br>
+            <button onclick="nextpage()">Sign in with Email</button>
+            <br>
+            <div>
+                <p>or</p>
+            </div>
+            <a href="doYouHavePiano.html"><img src="assests/google.png" alt="" width="300px"></a>
+            <br>
+            <a href="doYouHavePiano.html"><img src="assests/facebook2.png" alt="" width="300px" height="60px"></a>
+            <div class="atag">
+                <a href="home.html" style="text-align: center;">SKIP</a>
+    
+            </div>
+        </div>
+    </div>
+    <script>
+        function nextpage(){
+            window.location = "doYouHavePiano.html";
+        }
+    </script>
+</body>
+
+</html>

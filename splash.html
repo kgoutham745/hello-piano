@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Piano</title>
+    <link rel = "icon" href = "assests/star.png"  type = "image/x-icon">
+    <script src="https://kit.fontawesome.com/8f83b30483.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+        body{
+            background-color: #8216ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px;
+        }
+        .name{
+            color: white;
+            font-family: 'Combo', cursive;
+            font-weight: 400;
+            font-size: xx-large;
+            text-align: center;
+        }
+        .logo{
+            text-align: center;
+        }
+        .progress {
+        margin: 50px auto;
+        padding: 2px;
+        width: 100%;
+        max-width: 500px;
+        border: 3px solid white;
+        height: 15px;
+        }
+
+        .progress .progress__bar {
+        height: 100%;
+        width: 0%;
+        background-color: white;
+        animation: fill-bar 3s infinite;
+        }
+
+        @keyframes fill-bar {
+        from {width: 0%;}
+        to {width: 100%;}
+        }
+
+        @media only screen and (max-width: 650px) {
+	        body{
+		        transform: translate(0,0)scale(0.8);
+	    }
+}
+
+
+    </style>
+</head>
+<body id="main">
+    <div class="center">
+        <div class="name">
+            <h1>Hello<br>Piano</h1>
+        </div>
+        <div class="logo">
+            <img src="assests/star.png" alt="" width="100px">
+        </div>
+        <div class="progress"> 
+            <div class="progress__bar"></div>
+        </div>
+    </div>
+    <script>
+        window.onload = async ()=>{
+            setTimeout(async () => {
+                window.location = "getstarted.html";
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

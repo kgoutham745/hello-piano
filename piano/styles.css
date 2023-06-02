@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.notes img{
+  margin-top: -100px;
+}
+
+body {
+  /* background-color: #143F6B; */
+  background-color: #100034;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  flex-direction: column;
+  /* animation-name: backgroundColorPalette;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+button{
+  background: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  padding: 0px 10px;
+  cursor: pointer;
+}
+
+button:hover{
+  border: 1px solid yellow;
+}
+
+.piano {
+  display: flex;
+  margin-top: -100px;
+}
+
+.key {
+  height: calc(var(--width) * 4);
+  width: var(--width);
+}
+
+.white {
+  --width: 100px;
+  background-color: white;
+  border: 1px solid #333;
+  color: black;
+  text-align: center;
+}
+
+.white.active {
+  background-color: #CCC;
+}
+
+.black {
+  --width: 60px;
+  background-color: black;
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+  color: white;
+  text-align: center;
+}
+
+.black.active {
+  background-color: #333;
+}
+
+.controls{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 200px;
+  left: 50px;
+}
+
+.controls2{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 200px;
+  right: 50px;
+}
+
+.controls img, .controls2 img{
+  margin: 10px;
+  cursor: pointer;
+}
+
+@keyframes backgroundColorPalette {
+  0% {
+    background: #FF00FF;
+  }
+  25% {
+    background: #3D3DFF;
+  }
+  50% {
+    background: #FF9900;
+  }
+  75% {
+    background: #FFDD00;
+  }
+  100% {
+    background: #DD0000;
+  }
+}
+
+#marquee{
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.instructions{
+  background-color: #6620b2;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 600px;
+}
+
+.instructions h1{
+  color: #FFDD00;
+}
+
+.overlay{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  top: 0;
+  z-index: 10000;
+}
+
+.r1{
+  position: absolute;
+  right: 140px;
+  top: 430px;
+}
+
+.r3{
+  position: absolute;
+  right: 150px;
+  top: 160px;
+}
+
+.r4{
+  position: absolute;
+  right: 150px;
+  top: 300px;
+}
+
+.r6{
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+.r5{
+  position: absolute;
+  top: 330px;
+  left: 150px;
+}
+
+.r2{
+  position: absolute;
+  top: 500px;
+  left: 50px;
+}
+
+.m10{
+  margin: 50px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.info{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 650px) {
+  body{
+    padding: 0;
+  }
+  .piano,.notes{
+    transform: translate(0,0)scale(0.6);
+    margin-top: 0;
+  }
+  .controls,.controls2{
+    flex-direction: row;
+    height: 50px;
+    width: 50px;
+    left: 30px;
+    margin: 10px;
+    top: 300px;
+  }
+  .controls2{
+    left:190px;
+  }
+  .instructions{
+    margin-top: 10px;
+    width: 300px;
+  }
+  .info{
+    display: none;
+  }
+  .overlay{
+    display: none;
+  }
+
+}

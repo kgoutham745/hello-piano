@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Piano</title>
+        <link rel = "icon" href = "assests/star.png"  type = "image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+        body{
+            background-image: url(assests/bg4.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 100px;
+            height: 100vh;
+        }
+        .button{
+            background-color: #8216ff;
+            padding: 1rem;
+            border-radius: 20px;
+            border: none;
+            color: white;
+            width: 280px;
+            margin: 20px 10px;
+            cursor: pointer;
+        }
+        p{
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+            font-weight: 400;
+            font-size:xx-large;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .atag{
+            margin: 15px;
+            text-align: center;
+        }
+        a{
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            opacity: 0.8;
+        }
+        a:visited{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <p>Great! What <b>type</b> of piano?</p>
+        <div class="logo">
+            <img src="assests/acoustic.png" alt="" width="100px">
+            <img src="assests/piano-keyboard.png" alt="" width="100px">
+        </div>
+        <div class="buttons">
+            <button class="button" onclick="nextpage()">ACOUSTIC</button>
+            <button class="button" onclick="nextpage()">KEYBOARD</button>
+        </div>
+
+        <div class="atag">
+            <a href="profiles.html">I DON'T HAVE A PIANO YET</a>
+        </div>
+    </div>
+    <script>
+        function nextpage(){
+            window.location = "connect.html";
+        }
+    </script>
+</body>
+</html>

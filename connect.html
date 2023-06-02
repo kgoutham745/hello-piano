@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Piano</title>
+        <link rel = "icon" href = "assests/star.png"  type = "image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+        body{
+            background-image: url(assests/bg5.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px;
+        }
+        .button{
+            background-color: #8216ff;
+            padding: 1rem;
+            border-radius: 50%;
+            border: none;
+            color: white;
+            width: 100px;
+            height: 100px;
+            margin: 50px 0px;
+            text-align: center;
+            margin: auto;
+            cursor: pointer;
+        }
+        h1{
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+        }
+        p{
+            color: white;
+            font-weight: 200;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+        .atag{
+            margin: 50px;
+            text-align: center;
+        }
+        a{
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            opacity: 0.8;
+        }
+        a:visited{
+            color: white;
+        }
+        .center{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        @media only screen and (max-width: 650px) {
+	        body{
+                padding: 0px 20px;
+                height: 100vh;
+	    }}
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div class="logo">
+            <img src="assests/mobile-game.png" alt="" width="80px">
+        </div>
+        <h1>Now let's connect to your piano</h1>
+        <p>Put your phone/tablet on your piano to get started</p>
+        <button class="button" onclick="nextpage()">CONNECT</button>
+        <div class="atag">
+            <a href="profiles.html">I'M NOT NEXT TO MY PIANO</a>
+        </div>
+    </div>
+    <script>
+        function nextpage(){
+            window.location = "profiles.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hello Piano</title>
+    <link rel = "icon" href = "assests/star.png"  type = "image/x-icon">
+    <script src="script.js"></script>
+    <style>
+        .left{
+            background-image: url(assests/bg6.jpg);
+            background-size: cover;
+            width: 35%;
+            height: 100vh;
+        }
+        body{
+            display: flex;
+        }
+        .right{
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        .right p {
+            text-align: left;
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+        }
+        .fullwidth{
+            width:150%;
+        }
+        .button1{
+            text-align: start;
+        }
+        .heading,.para{
+        align-items: center;
+        color: white;
+        font-size: 25px;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 10px;
+        }
+        p{
+            font-size: 10px;
+            color: #8216ff;
+        }
+        .button2{
+        border: 1px solid gray;
+        margin-right: 50px;
+        margin-top: 10px;
+        }
+        .button2:hover,.active{
+        background-color: white;
+        color: black;
+        border: 4px solid #8216ff;
+        }
+        .para{
+            font-size: 20px;
+        }
+        img{
+            width: 100px;
+        }
+        .button{
+            width: 500px;
+            align-items: center;
+            text-align: center;
+        }
+        .m100{
+            margin-top: 100px;
+        }
+        .foot{
+            margin-top: 150px;
+            color: white;
+            font: 10px;
+        }
+        .terms{
+            font: 8px;
+            color: gray;
+        }
+        @media only screen and (max-width: 650px) {
+            .left{
+                display: none;
+            }
+            .fullwidth{
+                width: 90%;
+            }
+            .button{
+                width: 300px;
+            }
+            .right{
+                padding: 0px;
+            }
+            .button1{
+                margin-left: 0;
+            }
+            .m10{
+                margin-left: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body class="bg">
+    <div class="left">
+        <p class="heading m100"><b>Samantha R.</b></p>
+        <img src="assests/five-stars.png" alt="" width="10px">
+        <p class="para">
+
+            <b>"This is truly the most motivating <br>way to learn piano. <br>
+            </b>
+            I've come so far in a month!"
+        </p>
+        <p class="foot">
+            We won't charge you during the free trial period. Manage your subscription at <br> any time through the Google Play Store.
+
+        </p>
+        <p class="terms">
+            By continuing you agree to our terms of use & privacy policy.
+        </p>
+    </div>
+    <div class="right">
+        <p  class="heading">START YOUR PIANO JOURNEY NOW!</p>
+        <div class="box">
+            <div  class="button2 button1 fullwidth active" onclick="enable(this)">
+                <input type="radio" name="" id="" checked>
+                12 Months
+                <p>$499/year after free trial</p>
+            </div>  
+            <div  class="button2 button1 fullwidth" onclick="enable(this)">
+                <input type="radio" name="" id="">
+                6 Months
+                <p>$299/year</p>
+            </div>
+            <div  class="button2 button1 fullwidth" onclick="enable(this)">
+                <input type="radio" name="" id="">
+                3 Months
+                <p>$199/year</p>
+            </div>
+        </div>
+        <div>
+            <button id="btn" class="button" onclick="nextpage()">TRY FREE &SUBSCRIBE</button>
+            <div class="m10" style="display: flex;">
+
+                <p class="foot" style="margin: 0;">Cancel anytime ,</p><p class="terms" style="margin: 0;">&nbsp; secure payment</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function nextpage() {
+            window.location = "home.html";
+        }
+    </script>
+</body>
+</html>

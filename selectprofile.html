@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Piano</title>
+    <link rel = "icon" href = "assests/star.png"  type = "image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+        body{
+            background-image: url(assests/bg3.JPG);
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px;
+        }
+        .button2{
+            background-color: gray;
+            opacity: 0.5;
+            padding: 1rem;
+            border-radius: 50%;
+            border: none;
+            color: white;
+            width: 80px;
+            height: 80px;
+            margin: 20px 20px;
+            text-align: center;
+            margin: auto;
+            font-size: xx-large;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        h1{
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+        }
+        p{
+            color: gray;
+            font-weight: 200;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+        .button3{
+            background-color: #8216ff;
+            padding: 1rem 1.5rem;
+            border-radius: 20px;
+            border: none;
+            width: 200px;
+            margin: 20px;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+        }
+        .buttons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn{
+            margin: 20px;
+        }
+
+        @media only screen and (max-width: 650px) {
+            body{
+                height: 100vh;
+                padding: 0px 10px;
+            }
+    }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1>Who's going to learn piano?</h1>
+        <div class="buttons">
+            <div class="btn">
+                <div class="button">
+                    <img src="assests/profile.png" alt="" width="100px">
+                </div>
+                <p style="color: white;" id="name">John</p>
+            </div>
+            <div class="btn">
+                <button class="button2" onclick="createProfile()">+</button>
+                <p>Add a Profile</p>
+            </div>
+            <div class="btn">
+                <button class="button2" onclick="createProfile()">+</button>
+                <p>Add a Profile</p>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="button3" onclick="nextpage()" id="name2">CONTINUE AS JOHN</button>
+        </div>
+    </div>
+    <script>
+        function nextpage(){
+            window.location = "assests/que2.html";
+        }
+        function createProfile() {
+            window.location = "createprofile.html";
+        }
+
+        document.getElementById("name").innerHTML = window.localStorage.getItem("user");
+        document.getElementById("name2").innerHTML = "Continue as " + window.localStorage.getItem("user");
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Piano</title>
+        <link rel = "icon" href = "assests/star.png"  type = "image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            padding: 50px;
+            background-image: url(assests/bg2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px;
+        }
+        .content{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 30px;
+        }
+        .profile{
+            background-image: url(assests/add-contact.png);
+            height: 100px;
+            width: 100px;
+            background-size: cover;
+        }
+        input{
+            border: none;
+            background: white;
+            width: 300px;
+            padding: 10px;
+        }
+        button{
+            background-color: #8216ff;
+            padding: 1rem 1.5rem;
+            border-radius: 20px;
+            border: none;
+            width: 200px;
+            margin: 20px;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+        }
+        .buttons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+        }
+        p{
+            color: white;
+            font-weight: 200;
+            font-family: 'Poppins', sans-serif;
+        }
+        .m10{
+            margin: 10px;
+        }
+        @media only screen and (max-width: 650px) {
+	        .content{
+		        flex-direction: column;
+	    }
+        body{
+            height: 100vh;
+            padding: 0px 10px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1>Create a profile</h1>
+        <div class="content">
+            <div class="profile m10">
+
+            </div>
+            <div class="input m10">
+                <p>First Name</p>
+                <input type="text" name="" id="name" placeholder="Elton John">
+                <p style="opacity: 0.5;color: red;margin-top: 5px; display: none;" id="warning">*Name cannot be empty</p>
+            </div>
+            <div class="input m10">
+                <p>Age</p>
+                <input type="text" name="" id="" placeholder="" style="width:50px;">
+            </div>
+        </div>
+        <div class="buttons">
+            <button onclick="nextpage()">CREATE</button>
+        </div>
+    </div>
+    <script>
+        function nextpage(){
+            if(document.getElementById("name").value == ""){
+                document.getElementById("warning").style.display = "block";
+            }else{
+                let name = document.getElementById("name").value;
+                window.localStorage.setItem("user",name);
+                window.location = "selectprofile.html";
+            }
+        }
+    </script>
+</body>
+</html>

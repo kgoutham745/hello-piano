@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Piano</title>
+        <link rel = "icon" href = "assests/star.png"  type = "image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+        body{
+            background-image: url(assests/bg1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px;
+        }
+        .button{
+            background-color: #8216ff;
+            padding: 1rem;
+            border-radius: 20px;
+            border: none;
+            color: white;
+            width: 280px;
+            margin: 20px 10px;
+            cursor: pointer;
+        }
+        .button2{
+            background-color: transparent;
+            padding: 1rem;
+            border-radius: 20px;
+            border: 2px solid white;
+            color: white;
+            width: 280px;
+            margin: 20px 10px;
+            cursor: pointer;
+        }
+        h1{
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+        }
+        p{
+            color: white;
+            font-weight: 200;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+        .logo{
+            text-align: center;
+        }
+        @media only screen and (max-width: 650px) {
+	        body{
+		        height: 100vh;
+                padding: 0px 40px;
+            }
+	    }
+        .atag{
+            margin: 15px;
+        }
+        a{
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            opacity: 0.8;
+        }
+        a:visited{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1>Already have an account?</h1>
+        <p>Use your existing account and profiles <br> for <b>any of our platforms</b> on <b>unlimited</b> devices</p>
+        <div class="logo">
+            <img src="assests/musicians.png" alt="" width="200px">
+        </div>
+        <div class="buttons">
+            <button class="button" onclick="registerpage()">I'M NEW HERE</button>
+            <button class="button2" onclick="nextpage()">I HAVE AN ACCOUNT</button>
+        </div>
+        <div class="atag">
+            <a href="home.html" style="text-align: center;">SKIP</a>
+
+        </div>
+    </div>
+    <script src="router.js"></script>
+    <script>
+        function nextpage(){
+            window.location = "signin.html";
+        }
+
+        function registerpage(){
+            window.location = "registration_for_user.html";
+        }
+    </script>
+</body>
+</html>

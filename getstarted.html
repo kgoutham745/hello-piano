@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Piano</title>
+    <link rel = "icon" href = "assests/star.png"  type = "image/x-icon">
+    <script src="https://kit.fontawesome.com/8f83b30483.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+        body{
+            background-image: url(assests/piano.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 50px;
+        }
+        .name{
+            color: white;
+            font-family: 'Combo', cursive;
+            font-weight: 400;
+            font-size: xx-large;
+        }
+        .heading{
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            margin-top: -20px;
+        }
+        .description{
+            color: white;
+            font-weight: 200;
+            font-family: 'Poppins', sans-serif;
+        }
+        button{
+            background-color: #8216ff;
+            padding: 1rem 3rem;
+            border-radius: 40px;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+        .atag{
+            margin: 15px;
+        }
+        a{
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            opacity: 0.8;
+        }
+        a:visited{
+            color: white;
+        }
+
+        @media only screen and (max-width: 650px) {
+	        body{
+		        transform: translate(0,0)scale(0.8);
+                height: 100vh;
+                padding: 0;
+    	    }
+        }    
+    </style>
+</head>
+<body id="main">
+    <div class="left">
+        <div class="name">
+            <h1>Hello<br>Piano</h1>
+        </div>
+        <div class="heading">
+            <h2>BECOME A<br> PIANO PLAYER</h2>
+        </div>
+        <div class="description">
+            <p>In a matter of minutes,<br>you'll be playing <b>real music</b> with fun and easy <br>courses, tutorials and songs</p>
+        </div>
+        <button onclick="nextpage()">GET STARTED  ></button>
+        <div class="atag">
+            <a href="signin.html">ALREADY A MEMBER</a>
+            <br>
+            <a href="home.html">SKIP</a>
+        </div>
+    </div>
+    <script>
+        function nextpage(){
+            window.location = "alreadyacc.html";
+        }
+    </script>
+</body>
+</html>

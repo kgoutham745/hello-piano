@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Piano</title>
+        <link rel = "icon" href = "assests/star.png"  type = "image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+        body{
+            background-image: url(assests/bg2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px;
+        }
+        .button{
+            background-color: #8216ff;
+            padding: 1rem;
+            border-radius: 20px;
+            border: none;
+            color: white;
+            width: 300px;
+            margin: 20px 10px;
+            cursor: pointer;
+        }
+        .logo{
+            text-align: center;
+        }
+
+        p{
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+            font-weight: 400;
+            font-size:xx-large;
+        }
+        img{
+            margin-top: -80px;
+            padding: 0;
+        }
+        .buttons{
+            margin-top: -60px;
+        }
+        @media only screen and (max-width: 650px) {
+	        body{
+		        transform: translate(0,0)scale(0.9);
+                height: 100vh;
+                padding: 0px 30px;
+            }
+            img{
+                width: 300px;
+                margin-top: 10px;
+            }
+            .buttons{
+             margin-top: 30px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <p>Do you have a <b>piano</b> or <b>keyboard?</b></p>
+        <div class="logo">
+            <img src="assests/keyboard.png" alt="" width="600px">
+        </div>
+        <div class="buttons">
+            <button class="button" onclick="nextpage()">YES,I DO!</button>
+            <button class="button" onclick="profilespage()">NOT YET</button>
+        </div>
+    </div>
+    <script>
+        function nextpage(){
+            window.location = "pianotype.html";
+        }
+        function profilespage(){
+            window.location = "profiles.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Piano</title>
+    <link rel = "icon" href = "assests/star.png"  type = "image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+        *{
+            margin: 0;
+        }
+        body{
+            background-color: #100034;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+        .navigation{
+            height: 100vh;
+            width: 400px;
+            background-color: black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            position: fixed;
+        }
+        .line{
+            border-top: 1px solid white;
+            opacity: 0.5;
+        }
+        .profilebox{
+            background-color: #47b5ff;
+            display: flex;
+            padding: 20px;
+            justify-content: space-between;
+        }
+        .profile{
+            margin-right: 20px;
+            display: flex;
+        }
+        .namebox{
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        .navigation{
+            display: none;
+            z-index: 10000;
+        }
+        img{cursor: pointer;}
+        .cross{
+            text-align: end;
+            margin-top: 10px;
+        }
+        .tabs{
+            padding: 10px;
+            display: flex;
+            padding-left: 50px;
+            cursor: pointer;
+        }
+        .tabname{
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        .sections{
+            margin: 150px 5px;
+        }
+        .section{
+            border-radius: 10px;
+            width: 120px;
+            height: 100px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .active{
+            background-color: white;
+            color: black;
+        }
+        .card{
+            position: absolute;
+            top: 80px;
+            left: 500px;
+            background: #ffffff;
+            height: 300px;
+            width: 300px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 50px;
+        }
+        .dots{
+            position: absolute;
+            bottom: 20px;
+            left: 650px;
+        }
+
+        .rightarrow{
+            position: absolute;
+            top: 250px;
+            right: 180px;
+        }
+        @media only screen and (max-width: 650px) {
+	        .sections{
+                position:absolute;
+                top: 0px;
+                left: 60px;
+                margin:0;
+                display: flex;
+                transform: translate(0,0)scale(0.8);
+            }
+            .card{
+                left: 0;
+                margin: 40px;
+                width: 200px;
+            }
+            .rightarrow{
+                position: absolute;
+                top:550px;
+                left:185px;
+                transform: translate(0,0)scale(0.8);
+            }
+            .dots{
+                display: none;
+            }
+            body{
+                height: 100vh;
+            }
+            .navigation{
+                width: 300px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <img src="assests/menu.png" alt="" width="80px" onclick="showNav()">
+    </div>
+    <div class="navigation" id="navigation">
+        <div class="profilebox">
+            <div class="profile">
+                <img src="assests/profile.png" alt="" width="60px">
+                <div class="namebox">
+                    <p><b>John</b></p>
+                    <p>Edit Profile</p>
+                </div>
+            </div>
+            
+            <div class="cross">
+                <img src="assests/no.png" alt="" width="40px" onclick="hideNav()">
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="tabs" onclick="window.location = 'selectprofile.html';">
+            <div class="tabicon">
+                <img src="assests/add-user.png" alt="" width="40px">
+            </div>
+            <div class="tabname">Switch Profiles</div>
+        </div>
+        <div class="line"></div>
+        <div class="tabs">
+            <div class="tabicon">
+                <img src="assests/vip-pass.png" alt="" width="40px">
+            </div>
+            <div class="tabname">Go Premium</div>
+        </div>
+        <div class="line"></div>
+        <div class="tabs">
+            <div class="tabicon">
+                <img src="assests/music.png" alt="" width="40px">
+            </div>
+            <div class="tabname">Free Play</div>
+        </div>
+        <div class="line"></div>
+        <div class="tabs" onclick="window.location = 'songs.html';">
+            <div class="tabicon">
+                <img src="assests/musical-note.png" alt="" width="40px">
+            </div>
+            <div class="tabname">Sheet Music</div>
+        </div>
+        <div class="line"></div>
+        <div class="tabs" onclick="window.location = 'contactus.html';">
+            <div class="tabicon">
+                <img src="assests/contact.png" alt="" width="40px">
+            </div>
+            <div class="tabname">Contact Us</div>
+        </div>
+        <div class="line"></div>
+    </div>
+    <div class="sections">
+        <div class="section">
+            <a href="home.html"><img src="assests/musical-instrument - Copy.png" alt="" width="40px"></a>
+            <p>Instruments</p>
+        </div>
+        <div class="section active">
+            <a href="songs.html"><img src="assests/karaoke - Copy.png" alt="" width="40px"></a>
+            <p>Songs</p>
+        </div>
+    </div>
+
+    <div class="slider">
+        <div class="card" id="card">
+            <img src="assests/sheet1.svg" alt="" width="300px" id="image">
+            </div>
+        </div>
+    </div>
+    <div class="dots">
+        <img src="assests/more.png" alt="" width="100px">
+    </div>
+
+    <div class="rightarrow">
+        <img src="assests/right-arrow.png" alt="" width="60px" onclick="changeCard()">
+    </div>
+    <script>
+        function showNav() {
+            document.getElementById("navigation").style.display = "block";
+        }
+
+        function hideNav() {
+            document.getElementById("navigation").style.display = "none";
+        }
+        let path = ["assests/sheet1.svg","assests/sheet2.svg","assests/sheet3.svg"]
+        let i = 0;
+        function changeCard(){
+            i = i + 1;
+            if (i>=path.length) {
+                i = 0;
+            }
+            document.getElementById("image").src = path[i];
+            
+        }
+    
+    </script>
+</body>
+</html>
